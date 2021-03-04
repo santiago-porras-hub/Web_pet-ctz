@@ -1,5 +1,5 @@
 var allData;
-d3.dsv( ";", "../data/pets.citizens.csv" )
+d3.dsv( ";", "C:\Users\santi\Web_pet-ctz\data\pets-citizens.csv" )
   .then( function( data ) {
 
   allData= data;
