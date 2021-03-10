@@ -4,6 +4,8 @@ d3.dsv( ";", "../data/pets-citizens.csv" )
 
 	allData= data;
 	printData();
+	edit();
+	addNewPet();
 } )
 .catch( function( error ) {
 
@@ -44,6 +46,19 @@ function printData(data){
 			table.rows[i].cells[5].innerHTML = allData[i-1]["neighborhood"];
 		}
 	}
-	
+
 
 }
+
+function edit(){
+	allData[0] = {...allData[0],sex : "MACHO"};
+}
+
+function addNewPet(){
+
+  console.log(allData[allData.length-1]);
+  allData.push({"microchip" : "1312312", "species" : "1312312", "sex" : "1312312", "size" : "1312312", "potentDangerous" : "1312312", "neighborhood" : "1312312"});
+  console.log(allData[allData.length-1]);
+
+
+

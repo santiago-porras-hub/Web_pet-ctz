@@ -23,6 +23,18 @@ img {
   max-width: 100%;
 }
 
+table {
+   border-collapse: separate;
+   border-spacing: 5px;
+   background: #000 url("gradient.gif") bottom left repeat-x;
+   color: #fff;
+}
+td, th {
+   background: #fff;
+   color: #000;
+}
+
+
 /* -------------------------------- 
 
 Main Components 

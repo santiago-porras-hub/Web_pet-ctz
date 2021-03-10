@@ -10,12 +10,17 @@
  <link rel="stylesheet" href="css/components.css">
  <link rel="stylesheet" href="css/navegation.css">
 
-
  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
 
  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
  <script type ="text/javascript"src="https://d3js.org/d3.v5.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+
+
 </head>
 <body > 
 
@@ -49,16 +54,17 @@
 
           <div style="text-align:  center"> 
             <table id="table" border="1" style="margin: 0 auto">
+             <thead>
+               <tr>
+                <th>Microchip</th>
+                <th>Species</th>
+                <th>Sex</th>
+                <th>Size</th>
+                <th>PotentDangerous</th>
+                <th>Neighborhood</th>
 
-             <tr>
-              <th>Microchip</th>
-              <th>Species</th>
-              <th>Sex</th>
-              <th>Size</th>
-              <th>PotentDangerous</th>
-              <th>Neighborhood</th>
-
-            </tr>
+              </tr>
+            </thead>
 
 
             <tr>
@@ -105,12 +111,14 @@
               <td></td>
               <td></td>
             </tr>
+
+
 
           </table>
         </div>
       </div>
-      
 
+   
     </div>
   </div>
 </div>
@@ -356,5 +364,22 @@
         });
       </script>
       <script  type ="text/javascript" src="js/load-csv.js" ></script>
+
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
+    <!-- DATATABLES -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
+    </script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script>
+         $(document).ready(function () {
+            $('#table').DataTable();
+          });
+            </script>
     </body>
     </html>
