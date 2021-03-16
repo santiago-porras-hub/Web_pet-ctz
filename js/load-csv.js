@@ -11,6 +11,33 @@ d3.dsv( ";", "../data/pets-citizens.csv" )
 
 } );
 
+
+function edit(){
+	
+	console.log(allData[0] );
+	for (var i = 0; i < allData.length; i++) {
+		
+	console.log(allData[allData.length-1]);
+	var microchip = allData[i]["microchip"]=document.getElementById('upmicro').value;
+	var species=  allData[i]["species"]=document.getElementById('upspecie').value;
+	var sex =allData[i]["sex"]=document.getElementById('upsex').value;
+	var size =allData[i]["size"]=document.getElementById('upsize').value;
+	var potent=allData[i]["potentDangerous"]=document.getElementById('uppotent').value;
+	var neigh=allData[i]["neighborhood"]=document.getElementById('upneighboorhood').value;
+
+	allData.push({"microchip": microchip,"species": species,"sex": sex,"size": size,"potentDangerous":potent,"neighborhood":neigh,"race": document.getElementById('uprace').value});
+	console.log(allData[0] );
+	}
+	
+
+	
+}
+
+function addNewPet(){
+
+	allData.push({"microchip" : document.getElementById('Microchip').value, "species" : document.getElementById('Specie').value, "sex" : document.getElementById('Sex').value, "size" :document.getElementById('Size').value, "potentDangerous" : document.getElementById('Potent').value, "neighborhood" : document.getElementById('Neighborhood').value});	
+}
+
 function printData(data){
 
 	for(var i = 1; i < table.rows.length; i++)
@@ -50,15 +77,11 @@ function printData(data){
 
 }
 
-function edit(){
-	allData[0] = {...allData[0],sex : "MACHO"};
-}
 
-function addNewPet(){
 
-  console.log(allData[allData.length-1]);
-  allData.push({"microchip" : "1312312", "species" : "1312312", "sex" : "1312312", "size" : "1312312", "potentDangerous" : "1312312", "neighborhood" : "1312312"});
-  console.log(allData[allData.length-1]);
+
+
+
 
 
 

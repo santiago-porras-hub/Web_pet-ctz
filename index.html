@@ -7,18 +7,28 @@
  <meta name="description" content="">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+ <script src="./js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+ <script type ="text/javascript"src="https://d3js.org/d3.v5.js"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+
+
  <link rel="stylesheet" href="css/components.css">
  <link rel="stylesheet" href="css/navegation.css">
 
  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 
- <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
 
- <script type ="text/javascript"src="https://d3js.org/d3.v5.js"></script>
 
-
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    
+</head>
 
 
 </head>
@@ -65,8 +75,6 @@
 
               </tr>
             </thead>
-
-
             <tr>
               <td></td>
               <td></td>
@@ -118,7 +126,7 @@
         </div>
       </div>
 
-   
+
     </div>
   </div>
 </div>
@@ -131,7 +139,7 @@
        <div class="left-text">
         <h4> Upload an animal</h4>
         <div class="line-dec"></div>     
-        <h4> <p align="center">Add a new friend </p> </h4> 
+        <h4> <p align="center">Upload </p> </h4> 
 
         <fieldset>
           <legend>Complete all the gaps</legend>
@@ -141,148 +149,157 @@
               <tr>
                 <th height="60" width="150"></td>
                   <td style="border: 1px solid;"><label>Microchip</label>
-                    <input type="number" required></td> 
+                    <input type="number" id="upmicro"required></td> 
                     <td style="border: 1px solid;">
                      <label> Specie :</label>
-                     <select name="menu">
+                     <select name="menu" id="upspecie">
                        <option>Felino</option>
                        <option>Canino</option>
                      </select>
                      <td style="border: 1px solid;"><label>Sex</label>
-                      <select name="menu">
+                      <select name="menu" id="upsex">
                        <option>Hembra</option>
                        <option>Macho</option>
                      </select>
                      <td style="border: 1px solid;"><label>Size</label>
-                      <select name="menu">
+                      <select name="menu" id="upsize">
                        <option>Pequeño</option>
                        <option> Mediano</option>
                        <option> Pequeño</option>
                      </select>
                      <td style="border: 1px solid;">
                       <label>PotentDangerous</label>
-                      <select name="menu">
+                      <select name="menu" id="uppotent">
                        <option>true</option>
                        <option>false</option>
                      </select>
                    </td> <br>
                    <td style="border: 1px solid;"> <label>neighborhood</label>
-                    <input type="text"required></td> 
-                  </tr>
+                    <input type="text" id="upneighboorhood" required></td> 
 
-                  <p>
-                    <input type="submit" value="Add">
-                    <input type="reset" value="Delete">
-                  </p>
-                </form>
-
-              </table>
-            </fieldset>                          
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="tabs-content" id="Add">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <div class="wrapper">
-            <section id="first-tab-group" class="tabgroup">
-              <div id="tab1">   
-                <h4> <p align="center">Add a new friend </p> </h4> 
-
-                <fieldset>
-                  <legend>Complete all the gaps</legend>
-                  <table>
-                    <form action="index.html">
-
-                      <tr>
-                        <th height="60" width="150"></td>
-                          <td style="border: 1px solid;"><label>Microchip</label>
-                            <input type="number" required></td> 
-                            <td style="border: 1px solid;">
-                             <label> Specie :</label>
-                             <select name="menu">
-                               <option>Felino</option>
-                               <option>Canino</option>
-                             </select>
-                             <td style="border: 1px solid;"><label>Sex</label>
-                              <select name="menu">
-                               <option>Hembra</option>
-                               <option>Macho</option>
-                             </select>
-                             <td style="border: 1px solid;"><label>Size</label>
-                              <select name="menu">
-                               <option>Pequeño</option>
-                               <option> Mediano</option>
-                               <option> Pequeño</option>
-                             </select>
-                             <td style="border: 1px solid;">
-                              <label>PotentDangerous</label>
-                              <select name="menu">
-                               <option>true</option>
-                               <option>false</option>
-                             </select>
-                           </td> <br>
-                           <td style="border: 1px solid;"> <label>neighborhood</label>
-                            <input type="text"required></td> 
+                    <tr style="border: 1px solid;"> <label>race</label>
+                      <input type="text" id="uprace" required></tr> 
+                      <tr style="border: 1px solid;"> <label>owner</label>
+                        <input type="text " id="upowner" required></tr> 
+                        <tr style="border: 1px solid;"> <label>addres</label>
+                          <input type="text" id="upaddress" required></tr> 
+                          <tr style="border: 1px solid;"> <label>picture</label>
+                            <input type="text" id="uppicture" required></tr> 
                           </tr>
+
                           <p>
-                            <input type="submit" value="Add">
+                             <input name="upload" type="button" value = "upload" id="upload" onclick="edit()">
                             <input type="reset" value="Delete">
                           </p>
                         </form>
 
                       </table>
-                    </fieldset>
+                    </fieldset>                          
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
 
-        <div class="parallax-content contact-content" id="contact-us">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="contact-form">
-                  <div class="row">
-                    <form id="contact" action="" method="post">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <fieldset>
-                            <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                          </fieldset>
-                        </div>
-                        <div class="col-md-12">
-                          <fieldset>
-                            <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
-                          </fieldset>
-                        </div>
-                        <div class="col-md-12">
-                          <fieldset>
-                            <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                          </fieldset>
-                        </div>
-                        <div class="col-md-12">
-                          <fieldset>
-                            <button type="submit" id="form-submit" class="btn">Send Message</button>
-                          </fieldset>
+
+
+          <div class="tabs-content" id="Add">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 mx-auto">
+                  <div class="wrapper">
+                    <section id="first-tab-group" class="tabgroup">
+                      <div id="tab1">   
+                        <h4> <p align="center">Add a new friend </p> </h4> 
+
+                        <fieldset>
+                          <legend>Complete all the gaps</legend>
+                          <table>
+                            <form action="index.html">
+
+                              <tr>
+                                <th height="60" width="150"></td>
+                                  <td style="border: 1px solid;"><label>Microchip</label>
+                                    <input type="number" id ="Microchip" required></td> 
+                                    <td style="border: 1px solid;">
+                                     <label> Specie :</label>
+                                     <select name="menu" id ='Specie'>
+                                       <option>Felino</option>
+                                       <option>Canino</option>
+                                     </select>
+                                     <td style="border: 1px solid;"><label>Sex</label>
+                                      <select name="menu" id ='Sex'>
+                                       <option>Hembra</option>
+                                       <option>Macho</option>
+                                     </select>
+                                     <td style="border: 1px solid;"><label>Size</label>
+                                      <select name="menu" id = 'Size'>
+                                       <option>Pequeño</option>
+                                       <option> Mediano</option>
+                                       <option> Pequeño</option>
+                                     </select>
+                                     <td style="border: 1px solid;">
+                                      <label>PotentDangerous</label>
+                                      <select name="menu" id = 'Potent'>
+                                       <option>true</option>
+                                       <option>false</option>
+                                     </select>
+                                   </td> <br>
+                                   <td style="border: 1px solid;"> <label>neighborhood</label>
+                                    <input type="text" id ='Neighborhood' required> </td> 
+                                  </tr>
+                                  <p>
+                                   <input name="add" type="button" value = "add" id="add" onclick="addNewPet()"/>
+                                    <input type="reset" value="Delete">
+                                  </p>
+                                </form>
+
+                              </table>
+                            </fieldset>
+                          </div>
                         </div>
                       </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="map">
+
+
+                <div class="parallax-content contact-content" id="contact-us">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="contact-form">
+                          <div class="row">
+                            <form id="contact" action="" method="post">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="map">
                     <!-- How to change your own map point
                            1. Go to Google Maps
                            2. Click on your location point
@@ -364,12 +381,15 @@
         });
       </script>
       <script  type ="text/javascript" src="js/load-csv.js" ></script>
+      <script  type ="text/javascript" src="js/main.js" ></script>
 
 
-    <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
-        </script>
+
+
+      <!-- JQUERY -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+    </script>
     <!-- DATATABLES -->
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
     </script>
@@ -377,9 +397,9 @@
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
     </script>
     <script>
-         $(document).ready(function () {
-            $('#table').DataTable();
-          });
-            </script>
-    </body>
-    </html>
+     $(document).ready(function () {
+      $('#table').DataTable();
+    });
+  </script>
+</body>
+</html>
