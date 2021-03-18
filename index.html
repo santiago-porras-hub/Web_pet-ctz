@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Pets Citizens </title>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
- <meta name="description" content="">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pets Citizens </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <script src="./js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navegation.css">
 
- <script type ="text/javascript"src="https://d3js.org/d3.v5.js"></script>
-
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+  <linl re="stylesheet" href ="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
 
 
- <link rel="stylesheet" href="css/components.css">
- <link rel="stylesheet" href="css/navegation.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 
-    
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+    <script src="./js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <script type ="text/javascript"src="https://d3js.org/d3.v5.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+  </head>
 
 
 </head>
@@ -56,350 +57,263 @@
 
   <div class="service-content" id="DataSet">
     <div class="container">
-      <div class="col-md-4">
-        <div class="left-text">
-          <h4>Data Set</h4>
-          <div class="line-dec"></div>
-          <h4> <p align="center">Add a new friend </p> </h4> 
+      <div class="left-text">
+        <h4>Data Set</h4>
+        <div class="line-dec"></div>
+        <h4> <p align="center">TABLE </p> </h4> 
 
-          <div style="text-align:  center"> 
-            <table id="table" border="1" style="margin: 0 auto">
-             <thead>
-               <tr>
-                <th>Microchip</th>
-                <th>Species</th>
-                <th>Sex</th>
-                <th>Size</th>
-                <th>PotentDangerous</th>
-                <th>Neighborhood</th>
+        <div style="text-align:  center"> 
 
-              </tr>
-            </thead>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+         <table id="example" class="display" width="100%"></table>
 
-
-
-          </table>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
+       </div>
+     </div>
+   </div>
+ </div>
 </div>
 
 
 <div class="parallax-content projects-content" id="Update">
   <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-       <div class="left-text">
-        <h4> Upload an animal</h4>
-        <div class="line-dec"></div>     
-        <h4> <p align="center">Upload </p> </h4> 
+   <div class="left-text">
+    <h4> Upload an animal</h4>
+
+
+    <h4> <p align="center">Upload </p> </h4> 
+
+    <fieldset>
+      <legend>Complete all the gaps</legend>
+      <table  class="table table-striped table-dark"
+      <tr>
+
+
+        <th height="40" width=""></td>
+         <label for="validationCustom01" class="form-label">Microchip </label>
+         <input type="number"  class="form-control" id="upmicro" required></td> 
+         <label> Specie :</label>
+         <select name="menu" class="form-control" id="upspecie">
+           <option>Felino</option>
+           <option>Canino</option>
+         </select>
+         <td ><label>Sex</label>
+          <select name="menu" class="form-control" id="upsex">
+           <option>Hembra</option>
+           <option>Macho</option>
+         </select>
+         <td><label>Size</label>
+          <select name="menu" class="form-control" id="upsize">
+           <option>Pequeño</option>
+           <option> Mediano</option>
+           <option> Pequeño</option>
+         </select>
+         <td >
+          <label>PotentDangerous</label>
+          <select name="menu" class="form-control" id="uppotent">
+           <option>true</option>
+           <option>false</option>
+         </select>
+       </td> <br>
+
+       <td> <label>neighborhood</label>
+        <input type="text"  class="form-control"id="upneighboorhood" required></td> 
+
+        <input type="file" id="file" accept="image/*" onchange="mostrar()"/>
+        <br>
+        <img id="img"/>
+
+
+      </form>
+
+    </table>
+
+    <div class="col-md-4">
+
+      <tr style="border: 1px solid;"> <label >race</label>
+        <input type="text"  class="form-control"id="uprace" required></tr> <br>
+        <tr style="border: 1px solid;"> <label>owner</label>
+          <input type="text "  class="form-control"id="upowner" required></tr> <br>
+          <tr style="border: 1px solid;"> <label>addres</label>
+            <input type="text"  class="form-control" id="upaddress" required></tr> <br>
+            <tr style="border: 1px solid;"> <label>picture</label>
+              <input type="text" class="form-control" id="uppicture" required></tr> 
+            </tr>
+            <br>
+            <p>
+              <input name="upload" type="button" value = "Upload" id="upload" onclick="edit()">
+              <input type="reset" value="Delete">
+
+            </p>
+          </fieldset>                          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="tabs-content" id="Add">
+
+  <div class="row">
+    <div class="wrapper">
+      <section id="first-tab-group" class="tabgroup">
+
+        <h4> <p align="center">Add a new friend </p> </h4> 
 
         <fieldset>
           <legend>Complete all the gaps</legend>
-          <table>
-            <form action="index.html">
+          <div style="text-align:  center">
+            <table  class="table table-striped table-dark" style="margin: 0 auto" >
 
               <tr>
-                <th height="60" width="150"></td>
-                  <td style="border: 1px solid;"><label>Microchip</label>
-                    <input type="number" id="upmicro"required></td> 
-                    <td style="border: 1px solid;">
-                     <label> Specie :</label>
-                     <select name="menu" id="upspecie">
-                       <option>Felino</option>
-                       <option>Canino</option>
-                     </select>
-                     <td style="border: 1px solid;"><label>Sex</label>
-                      <select name="menu" id="upsex">
-                       <option>Hembra</option>
-                       <option>Macho</option>
-                     </select>
-                     <td style="border: 1px solid;"><label>Size</label>
-                      <select name="menu" id="upsize">
-                       <option>Pequeño</option>
-                       <option> Mediano</option>
-                       <option> Pequeño</option>
-                     </select>
-                     <td style="border: 1px solid;">
-                      <label>PotentDangerous</label>
-                      <select name="menu" id="uppotent">
-                       <option>true</option>
-                       <option>false</option>
-                     </select>
-                   </td> <br>
-                   <td style="border: 1px solid;"> <label>neighborhood</label>
-                    <input type="text" id="upneighboorhood" required></td> 
+                <th height="60" width="250"></td>
+                 <label for="validationCustom01" class="form-label">Microchip </label>
+                 <input type="number" class="form-control" id ="Microchip" required></td> 
+                 <td >
+                  <label for="validationCustom01" class="form-label">Specie </label>
+                  <select name="menu"  class="form-control" id ='Specie'>
+                   <option>Felino</option>
+                   <option>Canino</option>
+                 </select>
+                 <td>  <label for="validationCustom01" class="form-label">Sex </label>
+                  <select name="menu" class="form-control" id ='Sex'>
+                   <option>Hembra</option>
+                   <option>Macho</option>
+                 </select>
+                 <td>
+                  <label for="validationCustom01" class="form-label">Size </label>
+                  <select name="menu" class="form-control" id = 'Size'>
+                   <option>Pequeño</option>
+                   <option> Mediano</option>
+                   <option> Pequeño</option>
+                 </select>
+                 <td>
+                   <label for="validationCustom01" class="form-label">PotentDangerous </label>
+                   <select name="menu" class="form-control" id = 'Potent'>
+                     <option>true</option>
+                     <option>false</option>
+                   </select>
+                 </td> <br>
+                 <td>   <label for="validationCustom01" class="form-label">Neighborhood </label>
+                  <input type="text" class="form-control" id ='Neighborhood' required> </td> 
+                </tr>
 
-                    <tr style="border: 1px solid;"> <label>race</label>
-                      <input type="text" id="uprace" required></tr> 
-                      <tr style="border: 1px solid;"> <label>owner</label>
-                        <input type="text " id="upowner" required></tr> 
-                        <tr style="border: 1px solid;"> <label>addres</label>
-                          <input type="text" id="upaddress" required></tr> 
-                          <tr style="border: 1px solid;"> <label>picture</label>
-                            <input type="text" id="uppicture" required></tr> 
-                          </tr>
 
-                          <p>
-                             <input name="upload" type="button" value = "upload" id="upload" onclick="edit()">
-                            <input type="reset" value="Delete">
-                          </p>
-                        </form>
+              </table>
+              <br>
+              <p>
+                <input name="add" type="button" value = "ADD" id="add" onclick="addNewPet()"/>
+                <input type="reset" value="Delete">
+              </p>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-                      </table>
-                    </fieldset>                          
-                  </div>
+
+
+<div class="parallax-content contact-content" id="contact-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-form">
+          <div class="row">
+            <form id="contact" action="" method="post">
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="btn">Send Message</button>
+                  </fieldset>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="map">
+                  <!-- How to change your own map point
+                         1. Go to Google Maps
+                         2. Click on your location point
+                         3. Click "Share" and choose "Embed map" tab
+                         4. Copy only URL and paste it within the src="" field below
+                       -->
 
-
-
-
-          <div class="tabs-content" id="Add">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-8 mx-auto">
-                  <div class="wrapper">
-                    <section id="first-tab-group" class="tabgroup">
-                      <div id="tab1">   
-                        <h4> <p align="center">Add a new friend </p> </h4> 
-
-                        <fieldset>
-                          <legend>Complete all the gaps</legend>
-                          <table>
-                            <form action="index.html">
-
-                              <tr>
-                                <th height="60" width="150"></td>
-                                  <td style="border: 1px solid;"><label>Microchip</label>
-                                    <input type="number" id ="Microchip" required></td> 
-                                    <td style="border: 1px solid;">
-                                     <label> Specie :</label>
-                                     <select name="menu" id ='Specie'>
-                                       <option>Felino</option>
-                                       <option>Canino</option>
-                                     </select>
-                                     <td style="border: 1px solid;"><label>Sex</label>
-                                      <select name="menu" id ='Sex'>
-                                       <option>Hembra</option>
-                                       <option>Macho</option>
-                                     </select>
-                                     <td style="border: 1px solid;"><label>Size</label>
-                                      <select name="menu" id = 'Size'>
-                                       <option>Pequeño</option>
-                                       <option> Mediano</option>
-                                       <option> Pequeño</option>
-                                     </select>
-                                     <td style="border: 1px solid;">
-                                      <label>PotentDangerous</label>
-                                      <select name="menu" id = 'Potent'>
-                                       <option>true</option>
-                                       <option>false</option>
-                                     </select>
-                                   </td> <br>
-                                   <td style="border: 1px solid;"> <label>neighborhood</label>
-                                    <input type="text" id ='Neighborhood' required> </td> 
-                                  </tr>
-                                  <p>
-                                   <input name="add" type="button" value = "add" id="add" onclick="addNewPet()"/>
-                                    <input type="reset" value="Delete">
-                                  </p>
-                                </form>
-
-                              </table>
-                            </fieldset>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="parallax-content contact-content" id="contact-us">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="contact-form">
-                          <div class="row">
-                            <form id="contact" action="" method="post">
-                              <div class="row">
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                                  </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
-                                  </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                                  </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <button type="submit" id="form-submit" class="btn">Send Message</button>
-                                  </fieldset>
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="map">
-                    <!-- How to change your own map point
-                           1. Go to Google Maps
-                           2. Click on your location point
-                           3. Click "Share" and choose "Embed map" tab
-                           4. Copy only URL and paste it within the src="" field below
-                         -->
-
-                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.51641095645!2d-74.24789660764523!3d4.648283716789111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1615241030024!5m2!1ses!2sco" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                       </div>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.51641095645!2d-74.24789660764523!3d4.648283716789111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1615241030024!5m2!1ses!2sco" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                      </div>
                    </div>
                  </div>
                </div>
-
-               <footer>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="primary-button">
-                        <a href="#home">Back To Top</a>
-                      </div>
-                      <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                      </ul>
-                      <p>Copyright &copy; 2019 Company Name 
-
-                        - Design: <a rel="nofollow noopener" href="https://templatemo.com"><em>TemplateMo</em></a></p>
-                      </div>
-                    </div>
-                  </div>
-                </footer>
+             </div>
 
 
 
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-                <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-                <script src="js/vendor/bootstrap.min.js"></script>
-                <script src="js/plugins.js"></script>
-                <script src="js/main.js"></script>
-                <script>
-                  function openCity(cityName) {
-                    var i;
-                    var x = document.getElementsByClassName("city");
-                    for (i = 0; i < x.length; i++) {
-                     x[i].style.display = "none";  
-                   }
-                   document.getElementById(cityName).style.display = "block";  
-                 }
-               </script>
 
-               <script>
-                $(document).ready(function(){
-          // Add smooth scrolling to all links
-          $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+             <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+             <script src="js/vendor/bootstrap.min.js"></script>
+             <script src="js/plugins.js"></script>
+             <script src="js/main.js"></script>
+             <script>
+              function openCity(cityName) {
+                var i;
+                var x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";  
+               }
+               document.getElementById(cityName).style.display = "block";  
+             }
+           </script>
 
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
+           <script>
+            $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
 
-              // Store hash
-              var hash = this.hash;
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-              // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-              $('html, body').animate({
-                scrollTop: $(hash).offset().top
-              }, 800, function(){
+            // Store hash
+            var hash = this.hash;
 
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              });
-            } // End if
-          });
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
         });
-      </script>
-      <script  type ="text/javascript" src="js/load-csv.js" ></script>
-      <script  type ="text/javascript" src="js/main.js" ></script>
-
-
-
-
-      <!-- JQUERY -->
-      <script src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+      });
     </script>
-    <!-- DATATABLES -->
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
-    </script>
-    <!-- BOOTSTRAP -->
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
-    </script>
+    <script  type ="text/javascript" src="js/load-csv.js" ></script>
+    <script  type ="text/javascript" src="js/main.js" ></script>
     <script>
-     $(document).ready(function () {
-      $('#table').DataTable();
-    });
-  </script>
-</body>
-</html>
+
+    </script>
+  </body>
+  </html>

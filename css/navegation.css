@@ -190,7 +190,7 @@ table.dataTable thead .sorting_desc_disabled:before {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15vh;
-  background-image: url(../img/imagen1.jpg);
+  background-image: url(../img/imagen1.png);
   background-attachment: fixed;
   min-height: 100vh;
   background-size: cover;
@@ -307,7 +307,7 @@ h4, .h4 {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 8vh;
-  background-image: url(../img/imagen3.jpeg);
+  background-image: url(../img/imagen3.gif);
   background-attachment: fixed;
   min-height: 100vh;
   background-size: cover;
