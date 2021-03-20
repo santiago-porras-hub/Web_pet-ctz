@@ -3,7 +3,6 @@ d3.dsv( ";", "../data/pets-citizens.csv" )
 .then( function( data ) {
 
 	allData= data;
-	
 	printData();
 	edit();
 	addNewPet();
@@ -13,11 +12,40 @@ d3.dsv( ";", "../data/pets-citizens.csv" )
 
 } );
 
+var current_page = 1;
+var records_per_page = 10;
+
+function prevPage()
+{
+    if (current_page > 1) {
+        current_page--;
+        changePage(current_page);
+    }
+}
+
+function nextPage()
+{
+    if (current_page < numPages()) {
+        current_page++;
+        changePage(current_page);
+    }
+}
+
+
 function changePage(page)
 {
     var btn_next = document.getElementById("btn_next");
     var btn_prev = document.getElementById("btn_prev");
     var listing_table = document.getElementById("listingTable");
+    var listing_table2=document.getElementById("listingTable2");
+    var listing_table3=document.getElementById("listingTable3");
+    var listing_table4=document.getElementById("listingTable4");
+    var listing_table5=document.getElementById("listingTable5");
+    var listing_table6=document.getElementById("listingTable6");
+    
+
+
+    
     var page_span = document.getElementById("page");
 
     // Validate page
@@ -25,11 +53,47 @@ function changePage(page)
     if (page > numPages()) page = numPages();
 
     listing_table.innerHTML = "";
+    listing_table2.innerHTML="";
+    listing_table3.innerHTML="";
+    listing_table4.innerHTML="";
+    listing_table5.innerHTML="";
+    listing_table6.innerHTML="";
+
+
 
     for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
-        listing_table.innerHTML += allData[i].microchip +"&nbsp"+ allData[i].species + "&nbsp"+ allData[i].size+"&nbsp"+ allData[i].sex+"&nbsp" +allData[i].potentDangerous+"&nbsp"+ allData[i].neighborhood+"<br>";
+        listing_table.innerHTML += allData[i].microchip +"<br>";
     }
     page_span.innerHTML = page;
+
+    for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+        listing_table2.innerHTML += allData[i].species +"<br>";
+    }
+    page_span.innerHTML = page;
+
+    for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+        listing_table3.innerHTML += allData[i].sex +"<br>";
+    }
+    page_span.innerHTML = page;
+
+     for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+        listing_table4.innerHTML += allData[i].size +"<br>";
+    }
+    page_span.innerHTML = page;
+
+    for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+        listing_table5.innerHTML += allData[i].potentDangerous +"<br>";
+    }
+    page_span.innerHTML = page;
+
+     for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+        listing_table6.innerHTML += allData[i].neighborhood +"<br>";
+    }
+    page_span.innerHTML = page;
+
+
+
+
 
     if (page == 1) {
         btn_prev.style.visibility = "hidden";
@@ -54,18 +118,6 @@ window.onload = function() {
 };
 
 
-
-
-
-var dataPoints = [];
-
-for (var prop in allData) {
-    var arr = [];
-    for(key in allData[prop]){
-        arr.push(allData[prop][key]);
-    }
-    dataPoints.push(arr);
-}   
 
 function edit(){
 	
@@ -113,24 +165,6 @@ function mostrar(){
   }
 }
 
-var current_page = 1;
-var records_per_page = 5;
-
-function prevPage()
-{
-    if (current_page > 1) {
-        current_page--;
-        changePage(current_page);
-    }
-}
-
-function nextPage()
-{
-    if (current_page < numPages()) {
-        current_page++;
-        changePage(current_page);
-    }
-}
 
 
 
