@@ -107,205 +107,213 @@
             </tr>
 
 
-          
+
 
           </table>
 
-            page: <span id="page"></span>
-            <a href="javascript:prevPage()" id="btn_prev">Prev</a>
-            <a href="javascript:nextPage()" id="btn_next">Next</a>
+          page: <span id="page"></span>
+          <a href="javascript:prevPage()" id="btn_prev">Prev</a>
+          <a href="javascript:nextPage()" id="btn_next">Next</a>
 
           
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <p>
+
+            <select name="found" class="form-control" id="found">
+               <option value="microchip">Microchip</option>
+                 <option value="size">Size</option>
+                  <option value="specie">Specie</option>
+                   <option value="race">Race</option>
+                    <option value="neigh">Neighborhood</option>
+               </select>
+            <input class="form-control " type="text" id="find" >
+            <input name="Find" type="button"    value = "Search"  onclick="found()" />
+          </p>
 
 
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="parallax-content projects-content" id="Update">
-    <div class="container">
-     <div class="left-text">
-      <h4> Upload an animal</h4>
-
-
-      <h4> <p align="center">Upload </p> </h4> 
-
-      <fieldset>
-        <legend>Complete all the gaps</legend>
-        <table  class="table table-striped table-dark"
-        <tr>
-
-
-          <th height="40" width=""></td>
-           <label for="validationCustom01" class="form-label">Microchip </label>
-           <input type="number"  class="form-control" id="upmicro" required></td> 
-           <label> Specie :</label>
-           <select name="menu" class="form-control" id="upspecie">
-             <option>Felino</option>
-             <option>Canino</option>
-           </select>
-           <td ><label>Sex</label>
-            <select name="menu" class="form-control" id="upsex">
-             <option>Hembra</option>
-             <option>Macho</option>
-           </select>
-           <td><label>Size</label>
-            <select name="menu" class="form-control" id="upsize">
-             <option>Pequeño</option>
-             <option> Mediano</option>
-             <option> Pequeño</option>
-           </select>
-           <td >
-            <label>PotentDangerous</label>
-            <select name="menu" class="form-control" id="uppotent">
-             <option>true</option>
-             <option>false</option>
-           </select>
-         </td> <br>
-
-         <td> <label>neighborhood</label>
-          <input type="text"  class="form-control"id="upneighboorhood" required></td> 
-
-          <input type="file" id="file" accept="image/*" onchange="mostrar()"/>
-          <br>
-          <img id="img"/>
-
-
-        </form>
-
-      </table>
-
-      <div class="col-md-4">
-
-        <tr style="border: 1px solid;"> <label >race</label>
-          <input type="text"  class="form-control"id="uprace" required></tr> <br>
-          <tr style="border: 1px solid;"> <label>owner</label>
-            <input type="text "  class="form-control"id="upowner" required></tr> <br>
-            <tr style="border: 1px solid;"> <label>addres</label>
-              <input type="text"  class="form-control" id="upaddress" required></tr> <br>
-              <tr style="border: 1px solid;"> <label>picture</label>
-                <input type="text" class="form-control" id="uppicture" required></tr> 
-              </tr>
-              <br>
-              <p>
-                <input name="upload" type="button" value = "Upload" id="upload" onclick="edit()">
-                <input type="reset" value="Delete">
-
-              </p>
-            </fieldset>                          
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
 
+      <div class="parallax-content projects-content" id="Update">
+        <div class="container">
+         <div class="left-text">
+          <h4> Upload an animal</h4>
 
 
-  <div class="tabs-content" id="Add">
-
-    <div class="row">
-      <div class="wrapper">
-        <section id="first-tab-group" class="tabgroup">
-
-          <h4> <p align="center">Add a new friend </p> </h4> 
+          <h4> <p align="center">Upload </p> </h4> 
 
           <fieldset>
             <legend>Complete all the gaps</legend>
-            <div style="text-align:  center">
-              <table  class="table table-striped table-dark" style="margin: 0 auto" >
+            <table  class="table table-striped table-dark"
+            <tr>
 
-                <tr>
-                  <th height="60" width="250"></td>
-                   <label for="validationCustom01" class="form-label">Microchip </label>
-                   <input type="number" class="form-control" id ="Microchip" required></td> 
-                   <td >
-                    <label for="validationCustom01" class="form-label">Specie </label>
-                    <select name="menu"  class="form-control" id ='Specie'>
-                     <option>Felino</option>
-                     <option>Canino</option>
-                   </select>
-                   <td>  <label for="validationCustom01" class="form-label">Sex </label>
-                    <select name="menu" class="form-control" id ='Sex'>
-                     <option>Hembra</option>
-                     <option>Macho</option>
-                   </select>
-                   <td>
-                    <label for="validationCustom01" class="form-label">Size </label>
-                    <select name="menu" class="form-control" id = 'Size'>
-                     <option>Pequeño</option>
-                     <option> Mediano</option>
-                     <option> Pequeño</option>
-                   </select>
-                   <td>
-                     <label for="validationCustom01" class="form-label">PotentDangerous </label>
-                     <select name="menu" class="form-control" id = 'Potent'>
-                       <option>true</option>
-                       <option>false</option>
-                     </select>
-                   </td> <br>
-                   <td>   <label for="validationCustom01" class="form-label">Neighborhood </label>
-                    <input type="text" class="form-control" id ='Neighborhood' required> </td> 
+
+              <th height="40" width=""></td>
+               <label for="validationCustom01" class="form-label">Microchip </label>
+               <input type="number"  class="form-control" id="upmicro" required></td> 
+               <label> Specie :</label>
+               <select name="menu" class="form-control" id="upspecie">
+                 <option>Felino</option>
+                 <option>Canino</option>
+               </select>
+               <td ><label>Sex</label>
+                <select name="menu" class="form-control" id="upsex">
+                 <option>Hembra</option>
+                 <option>Macho</option>
+               </select>
+               <td><label>Size</label>
+                <select name="menu" class="form-control" id="upsize">
+                 <option>Pequeño</option>
+                 <option> Mediano</option>
+                 <option> Pequeño</option>
+               </select>
+               <td >
+                <label>PotentDangerous</label>
+                <select name="menu" class="form-control" id="uppotent">
+                 <option>true</option>
+                 <option>false</option>
+               </select>
+             </td> <br>
+
+             <td> <label>neighborhood</label>
+              <input type="text"  class="form-control"id="upneighboorhood" required></td> 
+
+              <input type="file" id="file" accept="image/*" onchange="mostrar()"/>
+              <br>
+              <img id="img"/>
+
+
+            </form>
+
+          </table>
+
+          <div class="col-md-4">
+
+            <tr style="border: 1px solid;"> <label >race</label>
+              <input type="text"  class="form-control"id="uprace" required></tr> <br>
+              <tr style="border: 1px solid;"> <label>owner</label>
+                <input type="text "  class="form-control"id="upowner" required></tr> <br>
+                <tr style="border: 1px solid;"> <label>addres</label>
+                  <input type="text"  class="form-control" id="upaddress" required></tr> <br>
+                  <tr style="border: 1px solid;"> <label>picture</label>
+                    <input type="text" class="form-control" id="uppicture" required></tr> 
                   </tr>
+                  <br>
+                  <p>
+                    <input name="upload" type="button" value = "Upload" id="upload" onclick="edit()">
+                    <input type="reset" value="Delete">
 
-
-                </table>
-                <br>
-                <p>
-                  <input name="add" type="button" value = "ADD" id="add" onclick="addNewPet()"/>
-                  <input type="reset" value="Delete">
-                </p>
-              </fieldset>
+                  </p>
+                </fieldset>                          
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
 
 
-  <div class="parallax-content contact-content" id="contact-us">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="contact-form">
-            <div class="row">
-              <form id="contact" action="" method="post">
-                <div class="row">
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="btn">Send Message</button>
-                    </fieldset>
-                  </div>
+
+      <div class="tabs-content" id="Add">
+
+        <div class="row">
+          <div class="wrapper">
+            <section id="first-tab-group" class="tabgroup">
+
+              <h4> <p align="center">Add a new friend </p> </h4> 
+
+              <fieldset>
+                <legend>Complete all the gaps</legend>
+                <div style="text-align:  center">
+                  <table  class="table table-striped table-dark" style="margin: 0 auto" >
+
+                    <tr>
+                      <th height="60" width="250"></td>
+                       <label for="validationCustom01" class="form-label">Microchip </label>
+                       <input type="number" class="form-control" id ="Microchip" required></td> 
+                       <td >
+                        <label for="validationCustom01" class="form-label">Specie </label>
+                        <select name="menu"  class="form-control" id ='Specie'>
+                         <option>Felino</option>
+                         <option>Canino</option>
+                       </select>
+                       <td>  <label for="validationCustom01" class="form-label">Sex </label>
+                        <select name="menu" class="form-control" id ='Sex'>
+                         <option>Hembra</option>
+                         <option>Macho</option>
+                       </select>
+                       <td>
+                        <label for="validationCustom01" class="form-label">Size </label>
+                        <select name="menu" class="form-control" id = 'Size'>
+                         <option>Pequeño</option>
+                         <option> Mediano</option>
+                         <option> Pequeño</option>
+                       </select>
+                       <td>
+                         <label for="validationCustom01" class="form-label">PotentDangerous </label>
+                         <select name="menu" class="form-control" id = 'Potent'>
+                           <option>true</option>
+                           <option>false</option>
+                         </select>
+                       </td> <br>
+                       <td>   <label for="validationCustom01" class="form-label">Neighborhood </label>
+                        <input type="text" class="form-control" id ='Neighborhood' required> </td> 
+                      </tr>
+
+
+                    </table>
+                    <br>
+                    <p>
+                      <input name="add" type="button" value = "ADD" id="add" onclick="addNewPet()"/>
+                      <input type="reset" value="Delete">
+                    </p>
+                  </fieldset>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="map">
+      </div>
+
+
+
+      <div class="parallax-content contact-content" id="contact-us">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="contact-form">
+                <div class="row">
+                  <form id="contact" action="" method="post">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <fieldset>
+                          <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <button type="submit" id="form-submit" class="btn">Send Message</button>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="map">
                   <!-- How to change your own map point
                          1. Go to Google Maps
                          2. Click on your location point
