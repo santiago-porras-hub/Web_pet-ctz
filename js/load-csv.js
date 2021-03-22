@@ -76,6 +76,8 @@ function changePage(page)
 
 
 
+
+
     for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
     	listing_table.innerHTML += allData[i].microchip +"<br>";
     }
@@ -138,15 +140,25 @@ function edit(){
 
 		if( microchip= allData[i].microchip){
 
+
+
+
 			var species=  allData[i]["species"]=document.getElementById('upspecie').value;
 			var sex =allData[i]["sex"]=document.getElementById('upsex').value;
 			var size =allData[i]["size"]=document.getElementById('upsize').value;
 			var potent=allData[i]["potentDangerous"]=document.getElementById('uppotent').value;
 			var neigh=allData[i]["neighborhood"]=document.getElementById('upneighboorhood').value;
 
-			allData.push({"microchip": microchip,"species": species,"sex": sex,"size": size,"potentDangerous":potent,"neighborhood":neigh,"race": document.getElementById('uprace').value});
-			console.log(allData[0] );
-			break;
+
+			if(neigh!="" && microchip!=""){
+				allData.unshift({"microchip": microchip,"species": species,"sex": sex,"size": size,"potentDangerous":potent,"neighborhood":neigh,"race": document.getElementById('uprace').value,"owner": document.getElementById('upowner').value,"addres":document.getElementById('upaddress').value});
+				console.log(allData[0] );
+				break;
+			} else {
+				alert("Por Favor ingrese todos los datos")
+				break;
+
+			}
 		}
 
 	}
@@ -157,8 +169,26 @@ function addNewPet(){
 
 	console.log(allData[0])
 
-	allData.unshift({"microchip" : document.getElementById('Microchip').value, "species" : document.getElementById('Specie').value, "sex" : document.getElementById('Sex').value, "size" :document.getElementById('Size').value, "potentDangerous" : document.getElementById('Potent').value, "neighborhood" : document.getElementById('Neighborhood').value});	
-	console.log(allData[0]);
+	var microchip = document.getElementById('Microchip').value;
+	var species =document.getElementById('Specie').value;
+	var sex =document.getElementById('Sex').value;
+	var size=document.getElementById('Size').value;
+	var potentDangerous=document.getElementById('Potent').value;
+	var neighborhood=document.getElementById('Neighborhood').value;
+
+
+	if(microchip!="" && neighborhood !=""){
+		allData.unshift({"microchip" : microchip, "species" : species, "sex" :sex , "size" :size, "potentDangerous" : potentDangerous , "neighborhood" :neighborhood });	
+		console.log(allData[0]);
+
+
+	} else {
+		alert("Por favor ingrese todos los datos")
+	}
+
+	
+	
+	
 }
 
 
@@ -177,68 +207,194 @@ function mostrar(){
 
 function found(){
 
-	
+
+
+	var search = document.querySelector('#micro');
 
 	if(document.getElementById("found").value== "microchip"){
 
 		var founded = allData.find(arr=>arr.microchip === document.getElementById('find').value);
 
-		console.log(founded);
+		search.innerHTML="";
 
+		search.innerHTML +=  `
+		<table id = "table" class="table table-dark table-striped table-bordered">
+		<thead>
+		<tr> 
+		<td>Microchip</td> 
+		<td>Species</td> 
+		<td>Sex</td> 
+		<td>Size</td> 
+		<td>PotentDangerous</td> 
+		<td>Neighborhood</td> 
+		</tr>  
+		</thead>
+		<tbody>
+		<tr> 
+		<td>${founded["microchip"]}</td> 
+		<td>${founded["species"]}</td> 
+		<td>${founded["sex"]}</td> 
+		<td>${founded["size"]}</td> 
+		<td>${founded["potentDangerous"]}</td> 
+		<td>${founded["neighborhood"]}</td> 
+		</tr>   
+		</tbody>
+		</table>
+
+		`
 	}
 
 	else if(document.getElementById("found").value=="size"){
 
-		for (var i = 0; i < allData.length; i++) {
 
 
-			if(size= allData[i].size){
-				var founded = allData.find(arr=>arr.size === document.getElementById('find').value);
+		var founded = allData.find(arr=>arr.size === document.getElementById('find').value);
+		alert("Solo se muestra el primero para evitar inconvenientes de rendimiento con la pagina")
 
-				console.log(founded);
+		search.innerHTML="";
 
-			}
-		}
+		search.innerHTML +=  `
+		<table id = "table" class="table table-dark table-striped table-bordered">
+		<thead>
+		<tr> 
+		<td>Microchip</td> 
+		<td>Species</td> 
+		<td>Sex</td> 
+		<td>Size</td> 
+		<td>PotentDangerous</td> 
+		<td>Neighborhood</td> 
+		</tr>  
+		</thead>
+		<tbody>
+		<tr> 
+		<td>${founded["microchip"]}</td> 
+		<td>${founded["species"]}</td> 
+		<td>${founded["sex"]}</td> 
+		<td>${founded["size"]}</td> 
+		<td>${founded["potentDangerous"]}</td> 
+		<td>${founded["neighborhood"]}</td> 
+		</tr>   
+		</tbody>
+		</table>
+
+		`
+
+
 
 	}
 
 	else if(document.getElementById("found").value=="specie"){
 
-		for (var i = 0; i < allData.length; i++) {
+		var founded = allData.find(arr=>arr.specie === document.getElementById('find').value);
 
+		alert("Solo se muestra el primero para evitar inconvenientes de rendimiento con la pagina")
 
-			if(size= allData[i].specie){
-				var founded = allData.find(arr=>arr.specie === document.getElementById('find').value);
-				console.log(founded);
+		search.innerHTML="";
 
-			}
-		}
+		search.innerHTML +=  `
+		<table id = "table" class="table table-dark table-striped table-bordered">
+		<thead>
+		<tr> 
+		<td>Microchip</td> 
+		<td>Species</td> 
+		<td>Sex</td> 
+		<td>Size</td> 
+		<td>PotentDangerous</td> 
+		<td>Neighborhood</td> 
+		</tr>  
+		</thead>
+		<tbody>
+		<tr> 
+		<td>${founded["microchip"]}</td> 
+		<td>${founded["species"]}</td> 
+		<td>${founded["sex"]}</td> 
+		<td>${founded["size"]}</td> 
+		<td>${founded["potentDangerous"]}</td> 
+		<td>${founded["neighborhood"]}</td> 
+		</tr>   
+		</tbody>
+		</table>
 
+		`
 	}
 
 	else if(document.getElementById("found").value=="neigh"){
 
-		for (var i = 0; i < allData.length; i++) {
 
+		var founded = allData.find(arr=>arr.neighborhood === document.getElementById('find').value);
 
-			if(size= allData[i].neighborhood){
-				var founded = allData.find(arr=>arr.neighborhood === document.getElementById('find').value);
-				console.log(founded);
+		alert("Solo se muestra el primero para evitar inconvenientes de rendimiento con la pagina")
 
-			}
-		}
+		search.innerHTML="";
 
+		search.innerHTML +=  `
+		<table id = "table" class="table table-dark table-striped table-bordered">
+		<thead>
+		<tr> 
+		<td>Microchip</td> 
+		<td>Species</td> 
+		<td>Sex</td> 
+		<td>Size</td> 
+		<td>PotentDangerous</td> 
+		<td>Neighborhood</td> 
+		</tr>  
+		</thead>
+		<tbody>
+		<tr> 
+		<td>${founded["microchip"]}</td> 
+		<td>${founded["species"]}</td> 
+		<td>${founded["sex"]}</td> 
+		<td>${founded["size"]}</td> 
+		<td>${founded["potentDangerous"]}</td> 
+		<td>${founded["neighborhood"]}</td> 
+		</tr>   
+		</tbody>
+		</table>
+
+		`
 	}
 
+	else if(document.getElementById("found").value=="race"){
 
 
+		var founded = allData.find(arr=>arr.neighborhood === document.getElementById('find').value);
 
+		alert("Solo se muestra el primero para evitar inconvenientes de rendimiento con la pagina")
 
+		search.innerHTML="";
 
+		search.innerHTML +=  `
+		<table id = "table" class="table table-dark table-striped table-bordered">
+		<thead>
+		<tr> 
+		<td>Addres</td> 
+		<td>Microchip</td> 
+		<td>Neighborhood</td> 
+		<td>Owner</td> 
+		<td>PotentDangerous</td> 
+		<td>Race</td> 
+		<td>Sex</td> 
+		<td>Size</td> 
+		<td>Species</td> 
+		</tr>  
+		</thead>
+		<tbody>
+		<tr> 
+		<td>${founded["addres"]}</td> 
+		<td>${founded["microchip"]}</td> 
+		<td>${founded["neighborhood"]}</td> 
+		<td>${founded["owner"]}</td> 
+		<td>${founded["potentDangerous"]}</td> 
+		<td>${founded["race"]}</td> 
+		<td>${founded["sex"]}</td> 
+		<td>${founded["size"]}</td> 
+		<td>${founded["species"]}</td> 
+		</tr>   
+		</tbody>
+		</table>
 
-
-
-	
+		`
+	}
 
 }
 
